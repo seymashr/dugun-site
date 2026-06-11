@@ -13,9 +13,7 @@ export default function Home() {
 >
           Düğün Davetiyesi
         </p>
-        <h1 style={{color:"red"}}>
-  CANLI DEĞİŞİKLİK TESTİ
-</h1>
+        
 
         <Image
           src="/couple.jpg"
