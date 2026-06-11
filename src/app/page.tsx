@@ -1,3 +1,4 @@
+import HomeIntro from "@/components/HomeIntro";
 import Link from "next/link";
 import Image from "next/image";
 import Countdown from "@/components/Countdown";
@@ -5,13 +6,16 @@ import Countdown from "@/components/Countdown";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f2eb] px-4 py-10">
-      <div className="max-w-4xl mx-auto text-center bg-[#faf8f3] border border-[#b7b2a5] p-8 md:p-12 relative">
+     <HomeIntro>
         <p
   className="uppercase tracking-[0.4em] text-[#7b7468] text-sm mb-6"
   style={{ fontFamily: "var(--font-cormorant)" }}
 >
           Düğün Davetiyesi
         </p>
+        <h1 style={{color:"red"}}>
+  CANLI DEĞİŞİKLİK TESTİ
+</h1>
 
         <Image
           src="/couple.jpg"
@@ -85,7 +89,7 @@ export default function Home() {
 </div>
 
         <Countdown />
-      </div>
+      </HomeIntro>
     </main>
   );
-}
+} 
