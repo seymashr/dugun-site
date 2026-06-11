@@ -70,22 +70,24 @@ export default function UploadPage() {
     });
 
   return (
-    <main className="min-h-screen bg-[#f5f2eb] flex items-center justify-center p-6">
-      <div className="w-full max-w-xl bg-white p-8 rounded-xl shadow-lg">
+    <main className="min-h-screen bg-[#f5f2eb] flex items-center justify-center p-4 sm:p-6">
+      <div className="w-full max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+
         <h1
-          className="text-5xl text-center mb-8 text-[#4f4a43]"
+          className="text-3xl sm:text-5xl text-center mb-6 sm:mb-8 text-[#3f3a34] leading-snug"
           style={{ fontFamily: "var(--font-great-vibes)" }}
         >
           Anılarınızı Bizimle Paylaşın
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
+
           <input
             type="text"
             placeholder="Ad Soyad"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border p-3 rounded-lg"
+            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
 
           <input
@@ -93,39 +95,46 @@ export default function UploadPage() {
             placeholder="Düğün Kodu"
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            className="w-full border p-3 rounded-lg"
+            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
           />
 
           <textarea
             placeholder="İsterseniz bir not bırakabilirsiniz"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full border p-3 rounded-lg"
+            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
             rows={4}
           />
 
-          <input
-            type="file"
-            multiple
-            onChange={(e) => setFiles(e.target.files)}
-            className="w-full"
-          />
+          {/* 📦 FILE UPLOAD BOX */}
+          <div className="w-full border-2 border-dashed border-gray-300 rounded-lg p-4 bg-gray-50">
+            <input
+              type="file"
+              multiple
+              onChange={(e) => setFiles(e.target.files)}
+              className="w-full text-sm"
+            />
+            <p className="text-xs text-gray-500 mt-2">
+              Fotoğrafları buraya seçin
+            </p>
+          </div>
 
           {error && (
-            <p className="text-red-600 font-medium">{error}</p>
+            <p className="text-red-600 font-medium text-sm">{error}</p>
           )}
 
           {message && (
-            <p className="text-green-600 font-medium">{message}</p>
+            <p className="text-green-600 font-medium text-sm">{message}</p>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-black text-white p-3 rounded-lg"
+            className="w-full bg-black text-white p-3 rounded-lg text-base font-medium active:scale-[0.98] transition"
           >
             {loading ? "Yükleniyor..." : "Fotoğrafları Yükle"}
           </button>
+
         </form>
       </div>
     </main>
