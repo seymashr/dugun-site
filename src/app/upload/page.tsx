@@ -50,7 +50,7 @@ export default function UploadPage() {
         }
       }
 
-      setMessage("🎉 Fotoğraflar başarıyla yüklendi!");
+      setMessage("Fotoğraflar başarıyla yüklendi.");
       setFiles(null);
       setName("");
       setCode("");
@@ -71,23 +71,29 @@ export default function UploadPage() {
 
   return (
     <main className="min-h-screen bg-[#f5f2eb] flex items-center justify-center p-4 sm:p-6">
-      <div className="w-full max-w-xl bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+      <div className="w-full max-w-xl bg-[#faf8f3] border border-[#d8d2c5] p-6 sm:p-8 rounded-xl shadow-lg">
 
         <h1
-          className="text-3xl sm:text-5xl text-center mb-6 sm:mb-8 text-[#3f3a34] leading-snug"
+          className="text-4xl sm:text-6xl text-center mb-3 text-[#4f4a43]"
           style={{ fontFamily: "var(--font-great-vibes)" }}
         >
-          Anılarınızı Bizimle Paylaşın
+          Bizimle Bir Anı Bırakın
         </h1>
 
-        <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
+        <p
+          className="text-center text-[#7b7468] mb-8 leading-relaxed"
+          style={{ fontFamily: "var(--font-cormorant)" }}
+        >
+          Bu özel güne ait fotoğraf ve anılarınızı bizimle paylaşabilirsiniz.
+        </p>
 
+        <form className="space-y-5" onSubmit={handleSubmit}>
           <input
             type="text"
             placeholder="Ad Soyad"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full border border-[#c7c1b3] p-3 rounded-lg text-[#4f4a43] placeholder:text-[#8d8578] focus:outline-none focus:ring-2 focus:ring-[#b7b2a5]"
           />
 
           <input
@@ -95,46 +101,49 @@ export default function UploadPage() {
             placeholder="Düğün Kodu"
             value={code}
             onChange={(e) => setCode(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
+            className="w-full border border-[#c7c1b3] p-3 rounded-lg text-[#4f4a43] placeholder:text-[#8d8578] focus:outline-none focus:ring-2 focus:ring-[#b7b2a5]"
           />
 
           <textarea
             placeholder="İsterseniz bir not bırakabilirsiniz"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full border border-gray-300 p-3 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-gray-400"
             rows={4}
+            className="w-full border border-[#c7c1b3] p-3 rounded-lg text-[#4f4a43] placeholder:text-[#8d8578] focus:outline-none focus:ring-2 focus:ring-[#b7b2a5]"
           />
 
-          {/* 📦 FILE UPLOAD BOX */}
-          <div className="w-full border-2 border-dashed border-gray-300 rounded-lg p-4 bg-gray-50">
+          <div className="w-full border-2 border-dashed border-[#c7c1b3] rounded-lg p-5 bg-[#f5f2eb]">
             <input
               type="file"
               multiple
               onChange={(e) => setFiles(e.target.files)}
-              className="w-full text-sm"
+              className="w-full text-sm text-[#4f4a43]"
             />
-            <p className="text-xs text-gray-500 mt-2">
-              Fotoğrafları buraya seçin
+
+            <p className="text-sm text-[#7b7468] mt-3">
+              Fotoğraflarınızı seçerek paylaşabilirsiniz.
             </p>
           </div>
 
           {error && (
-            <p className="text-red-600 font-medium text-sm">{error}</p>
+            <p className="text-red-600 font-medium text-sm">
+              {error}
+            </p>
           )}
 
           {message && (
-            <p className="text-green-600 font-medium text-sm">{message}</p>
+            <p className="text-green-700 font-medium text-sm">
+              {message}
+            </p>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-black text-white p-3 rounded-lg text-base font-medium active:scale-[0.98] transition"
+            className="w-full border border-[#7b7468] bg-[#f5f2eb] text-[#4f4a43] p-3 rounded-lg font-medium hover:bg-[#ebe6db] transition"
           >
             {loading ? "Yükleniyor..." : "Fotoğrafları Yükle"}
           </button>
-
         </form>
       </div>
     </main>
