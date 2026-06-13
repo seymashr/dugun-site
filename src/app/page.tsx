@@ -46,8 +46,8 @@ export default function Home() {
   className="text-3xl mb-6 text-[#4f4a43]"
   style={{ fontFamily: "var(--font-cormorant)" }}
 >
-          12 Eylül 2026'ya Davetlisiniz
-        </p>
+  Bir Ömür Boyu Sürecek Hikâyemize Şahitlik Etmenizden Mutluluk Duyarız
+</p>
 
         <p
   className="text-2xl leading-relaxed mb-10 text-[#4f4a43]"
@@ -64,11 +64,19 @@ export default function Home() {
   12 Eylül 2026
 </p>
 
-          <p className="text-lg">🕒 Saat daha eklenecek</p>
+          <p
+  className="text-lg text-[#4f4a43]"
+  style={{ fontFamily: "var(--font-cormorant)" }}
+>
+  Saat bilgisi yakında eklenecektir
+</p>
 
-          <p className="text-lg">
-            📍 Çamlık Bahçe Kır Düğünü
-          </p>
+<p
+  className="text-lg text-[#4f4a43]"
+  style={{ fontFamily: "var(--font-cormorant)" }}
+>
+  Çamlık Bahçe Kır Düğünü
+</p>
 
           <a
             href="https://maps.google.com/?q=Fatih+Mahallesi+Cumhuriyet+Caddesi+No+196+Çavuşbaşı+Beykoz+İstanbul"
@@ -76,7 +84,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block mt-3 border border-[#7b7468] px-6 py-3 text-[#4f4a43] hover:bg-[#ebe6db] transition"
           >
-            📍 Yol Tarifi Al
+            Yol Tarifi
           </a>
         </div>
         <div className="mt-8">
@@ -84,7 +92,7 @@ export default function Home() {
     href="/upload"
     className="inline-block border border-[#7b7468] px-8 py-4 text-[#4f4a43] hover:bg-[#ebe6db] transition"
   >
-    📸 Fotoğraf Yükle
+    Anılarınızı Bizimle Paylaşın
   </Link>
 </div>
 
