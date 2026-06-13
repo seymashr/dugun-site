@@ -49,12 +49,7 @@ export default function Home() {
   Bir Ömür Boyu Sürecek Hikâyemize Şahitlik Etmenizden Mutluluk Duyarız
 </p>
 
-        <p
-  className="text-2xl leading-relaxed mb-10 text-[#4f4a43]"
-  style={{ fontFamily: "var(--font-cormorant)" }}
->
-          Bu özel günümüzde sizleri aramızda görmekten mutluluk duyarız.
-        </p>
+       
 
         <div className="bg-transparent border-t border-b border-[#c7c1b3] py-8 space-y-4">
           <p
