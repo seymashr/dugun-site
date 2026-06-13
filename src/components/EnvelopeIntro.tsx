@@ -158,7 +158,7 @@ export default function EnvelopeIntro({
                     }}
                     className="text-xl md:text-3xl"
                   >
-                    SG
+                    G&S
                   </span>
                 </div>
 
