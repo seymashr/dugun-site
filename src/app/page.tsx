@@ -1,3 +1,4 @@
+import EnvelopeIntro from "@/components/EnvelopeIntro";
 import HomeIntro from "@/components/HomeIntro";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import Countdown from "@/components/Countdown";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f5f2eb] px-4 py-10">
+       <EnvelopeIntro>
      <HomeIntro>
         <p
   className="uppercase tracking-[0.4em] text-[#7b7468] text-sm mb-6"
@@ -88,6 +90,7 @@ export default function Home() {
 
         <Countdown />
       </HomeIntro>
+      </EnvelopeIntro>
     </main>
   );
 } 
