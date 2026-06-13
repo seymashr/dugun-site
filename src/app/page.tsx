@@ -68,14 +68,14 @@ export default function Home() {
   className="text-lg text-[#4f4a43]"
   style={{ fontFamily: "var(--font-cormorant)" }}
 >
-  Saat bilgisi yakında eklenecektir
+  19:00
 </p>
 
 <p
   className="text-lg text-[#4f4a43]"
   style={{ fontFamily: "var(--font-cormorant)" }}
 >
-  Çamlık Bahçe Kır Düğünü
+  Çamlık Bahçe Kır Düğünü 
 </p>
 
           <a
